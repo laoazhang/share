@@ -1,0 +1,203 @@
+{
+    "vim.visualModeKeyBindings": [
+        {
+            "before": ["H"],
+            "after": ["^"]
+        },
+        {
+            "before": ["L"],
+            "after": ["g","_"]
+        }
+    ],
+    "vim.normalModeKeyBindings": [
+        {
+            "before": ["H"],
+            "after": ["^"]
+        },
+        {
+            "before": ["L"],
+            "after": ["g","_"]
+        }
+    ],
+    "vim.operatorPendingModeKeyBindings": [
+        {
+            "before": ["<Leader>", ";"],
+            "commands": ["whichkey.show"]
+        },
+        {
+            "before": ["H"],
+            "after": ["^"]
+        },
+        {
+            "before": ["L"],
+            "after": ["g","_"]
+        }
+    ],
+    "vim.normalModeKeyBindingsNonRecursive": [
+        // format document
+        {
+            "before": ["<Leader>", "f"],
+            "commands": ["editor.action.formatDocument"]
+        },
+        // jump to error
+        {
+            "before": ["<Leader>", "e"],
+            "commands": ["editor.action.marker.nextInFiles"]
+        },
+        {
+            "before": ["<Leader>", ";"],
+            "commands": ["whichkey.show"]
+        },
+        {
+            "before": ["H"],
+            "after": ["^"]
+        },
+        {
+            "before": ["J"],
+            "after": ["6","j"]
+        }
+    ],
+    "git.enableSmartCommit": true,
+    // 配置文件类型识别
+    "files.associations": {
+        "*.js": "javascript",
+        "*.json": "jsonc",
+        "*.cjson": "jsonc",
+        "*.wxss": "css",
+        "*.wxs": "javascript"
+    },
+    "extensions.ignoreRecommendations": false,
+    "files.exclude": {
+        "**/.git": true,
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/CVS": true,
+        "**/.DS_Store": true,
+        "**/node_modules": false,
+        "**/Thumbs.db": true
+    },
+    // "javascript.implicitProjectConfig.experimentalDecorators":true,
+    "liveServer.settings.root": "./",
+    "liveServer.settings.donotShowInfoMsg": true,
+    "liveServer.settings.port": 5800,
+    "liveServer.settings.ignoreFiles": [
+        ".vscode/**",
+        "**/*.mov"
+    ],
+    "liveServer.settings.CustomBrowser": "chrome",
+    "liveServer.settings.proxy": {
+        "enable": false,
+        "baseUri": "/",
+        "proxyUri": "http://113.106.54.176:8080"
+    },
+    "explorer.confirmDragAndDrop": false,
+    "typescript.updateImportsOnFileMove.enabled": "prompt",
+    "git.confirmSync": false,
+    "editor.tabSize": 2,
+    "editor.fontWeight": "500",
+    "[json]": {},
+    "editor.tabCompletion": "on",
+    "vsicons.projectDetection.autoReload": true,
+    "editor.fontFamily": "Menlo, Monaco,Consolas, 'Courier New', monospace",
+    "[html]": {
+        "editor.defaultFormatter": "vscode.html-language-features"
+    },
+    "editor.fontSize": 16,
+    "debug.console.fontSize": 14,
+    "vsicons.dontShowNewVersionMessage": true,
+    // vue eslint start 保存时自动格式化代码
+    "editor.formatOnSave": false,
+    "minapp-vscode.disableAutoConfig": true,
+    // eslint配置项，保存时，自动修复错误
+    "editor.codeActionsOnSave": {
+        "source.fixAll": "explicit"
+    },
+    "vetur.ignoreProjectWarning": true,
+    // 让vetur使用vs自带的js格式化工具
+    // uni-app和vue 项目使用
+    "vetur.format.defaultFormatter.js": "vscode-typescript",
+    // "javascript.format.semicolons": "remove"
+    // 指定 *.vue 文件的格式化工具为vetur
+    "[vue]": {
+        // "editor.defaultFormatter": "Vue.volar"
+        "editor.defaultFormatter": "Vue.volar"
+    },
+    // ts new start
+    "vetur.format.defaultFormatterOptions": {
+        // "js-beautify-html":{
+        //     // #vue组件中html代码格式化样式
+        //     "wrap_attributes":"force-aligned", // 也可以设置为"auto",效果会不一样
+        //     "wrap_line_length":200,
+        //     "end_with_newline":false,
+        //     "semi":true,
+        //     "singleQuote":true,
+        // },
+        "prettier": {
+            //设置分号
+            "semi": false,
+            // 双引号变成单引号
+            "singleQuote": true,
+            // 禁止随时添加逗号
+            "trailingComma": "none"
+        }
+    },
+    // new end
+    // 指定 *.js 文件的格式化工具为vscode自带
+    "[javascript]": {
+        "editor.defaultFormatter": "vscode.typescript-language-features"
+    },
+    // 指定 *.ts 文件的格式化工具为vscode自带
+    "[typescript]": {
+        "editor.defaultFormatter": "vscode.typescript-language-features"
+    },
+    // 函数前面是否加空格
+    "javascript.format.insertSpaceBeforeFunctionParenthesis": false,
+    // eslint end
+    // react
+    // 默认使用prittier作为格式化工具
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    // 不要有分号
+    "prettier.semi": false,
+    // 使用单引号
+    "prettier.singleQuote": true,
+    // 当按tab键的时候，会自动提示
+    "emmet.triggerExpansionOnTab": true,
+    "emmet.showAbbreviationSuggestions": true,
+    "emmet.includeLanguages": {
+        // jsx的提示
+        "javascript": "javascriptreact",
+        "vue-html": "html",
+        "vue": "html",
+        "wxml": "html"
+    },
+    "explorer.compactFolders": false,
+    "notebook.compactView": false,
+    "[wxml]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[wxss]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[wxs]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "prettier.documentSelectors": [
+        "**/*.wxml",
+        "**/*.wxss",
+        "**/*.wxs"
+    ],
+    "tabnine.experimentalAutoImports": true,
+    "workbench.colorTheme": "monokai-charcoal",
+    "remote.extensionKind": {
+        "GitHub.copilot": [
+            "ui"
+        ],
+        "github.copilot-chat": [
+            "ui"
+        ]
+    },
+    "github.copilot.advanced": {
+        "authProvider": "github-enterprise"
+    },
+    "github-enterprise.uri": "http://NjgwMC5iMTdhMTdhYzI5ODEwZjA5MmQ0MmRlYTE2MjViYmUwMQ==@124.220.157.23:8800"
+}
