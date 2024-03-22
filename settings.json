@@ -1,4 +1,12 @@
 {
+    "vim.easymotion": true,
+    "vim.leader": "<Space>",
+    "vim.useSystemClipboard": true,
+    "vim.sneak": true,
+    "vim.surround": true,
+    "vim.handleKeys": {
+        "<C-c>": false,
+    },
     "vim.visualModeKeyBindings": [
         {
             "before": ["H"],
@@ -7,21 +15,61 @@
         {
             "before": ["L"],
             "after": ["g","_"]
-        }
-    ],
-    "vim.normalModeKeyBindings": [
-        {
-            "before": ["H"],
-            "after": ["^"]
         },
         {
-            "before": ["L"],
-            "after": ["g","_"]
+            "before": ["J"],
+            "after": ["5","j"]
+        },
+        {
+            "before": ["K"],
+            "after": ["5","k"] 
+        },
+        {
+            "before": ["a","i"],
+            "after": ["a","I"]
+        }
+    ],
+    "vim.visualModeKeyBindingsNonRecursive": [
+        {
+            "before": ["f"],
+            "after": ["s"]
+        }
+    ],
+    "vim.operatorPendingModeKeyBindingsNonRecursive": [
+        {
+            "before": ["f"],
+            "after": ["z"]
+        },
+        {
+            "before": ["F"],
+            "after": ["Z"]
         }
     ],
     "vim.operatorPendingModeKeyBindings": [
         {
-            "before": ["<Leader>", ";"],
+            "before": ["H"],
+            "after": ["^"]
+        },
+        {
+            "before": ["L"],
+            "after": ["g","_"]
+        },
+        {
+            "before": ["a","i"],
+            "after": ["a","I"]
+        },
+        {
+            "before": ["<leader>", ";"],
+            "commands": ["whichkey.show"]
+        }
+    ],
+    "vim.normalModeKeyBindings": [
+        {
+            "before": ["<leader>", "d","f"],
+            "after": ["v","$","%","d"]
+        },
+        {
+            "before": ["<leader>", ";"],
             "commands": ["whichkey.show"]
         },
         {
@@ -31,30 +79,96 @@
         {
             "before": ["L"],
             "after": ["g","_"]
-        }
-    ],
-    "vim.normalModeKeyBindingsNonRecursive": [
-        // format document
-        {
-            "before": ["<Leader>", "f"],
-            "commands": ["editor.action.formatDocument"]
-        },
-        // jump to error
-        {
-            "before": ["<Leader>", "e"],
-            "commands": ["editor.action.marker.nextInFiles"]
-        },
-        {
-            "before": ["<Leader>", ";"],
-            "commands": ["whichkey.show"]
-        },
-        {
-            "before": ["H"],
-            "after": ["^"]
         },
         {
             "before": ["J"],
-            "after": ["6","j"]
+            "after": ["5","j"]
+        },
+        {
+            "before": ["K"],
+            "after": ["5","k"] 
+        }
+    ],
+    "vim.normalModeKeyBindingsNonRecursive": [
+        {
+            "before": ["<leader>", "n","d"],
+            "commands": ["explorer.newFolder"]
+        },
+        {
+            "before": ["<leader>", "n","f"],
+            "commands": ["explorer.newFile"]
+        },
+        // format document
+        {
+            "before": ["<leader>", "f","d"],
+            "commands": ["editor.action.formatDocument"]
+        },
+        {
+            "before": ["<leader>", "r","n"],
+            "commands": ["editor.action.rename"]
+        },
+        {
+            "before": ["<leader>", "["],
+            "commands": [
+                {
+                    "command": "editor.fold"
+                },
+                {
+                    "command": "vim.remap",
+                    "args": {
+                        "after": ["$","%"]
+                    }
+                }
+            ]
+        },
+        {
+            "before": ["<Leader>", "]"],
+            "commands": [
+                {
+                    "command": "editor.unfold"
+                }
+            ]
+        },
+        {
+            "before": ["<Leader>",";"],
+            "commands": ["whichkey.show"]
+        },
+        // jump to error
+        {
+            "before": ["<leader>", "e"],
+            "commands": ["editor.action.marker.nextInFiles"]
+        },
+        {
+            "before": ["<leader>", ";"],
+            "commands": ["whichkey.show"]
+        },
+        {
+            "before": ["J"],
+            "after": ["5","j"]
+        },
+        {
+            "before": ["K"],
+            "after": ["5","k"] 
+        },
+        {
+            "before": ["Leader>","j"],
+            "after": ["J"]
+        },
+        {
+            "before": ["f"],
+            "after": ["s"]
+        },
+        {
+            "before": ["F"],
+            "after": ["S"]
+        },
+        {
+            "before": ["s"],
+            "after": ["c","l"]
+        },
+        {
+            "before": ["S"],
+            "after": ["^","C"]
         }
     ],
     "git.enableSmartCommit": true,
@@ -199,5 +313,6 @@
     "github.copilot.advanced": {
         "authProvider": "github-enterprise"
     },
-    "github-enterprise.uri": "http://NjgwMC5iMTdhMTdhYzI5ODEwZjA5MmQ0MmRlYTE2MjViYmUwMQ==@124.220.157.23:8800"
+    "github-enterprise.uri": "http://NjgwMC5iMTdhMTdhYzI5ODEwZjA5MmQ0MmRlYTE2MjViYmUwMQ==@124.220.157.23:8800",
+    "workbench.editor.showTabs": "none"
 }

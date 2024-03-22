@@ -28,18 +28,44 @@ set scrolloff=10
 "Vim 会在您输入搜索模式的过程中逐步匹配并高亮显示匹配的文本。
 set incsearch
 
+" 搜索时智能匹配大小写
+set ignorecase smartcase
+
+
 "--在搜索时忽略大小写
-set ignorecase
+"set ignorecase
 
 "--将搜索匹配的文本高亮显示
 set hlsearch
+
+"开启模式显示
+set showmode
+
+"自动缩进
+set autoindent
+
+"Find more examples here: https://jb.gg/share-ideavimrc
+"配置编码
+set encoding=utf-8
+
+"同步IDE与VIM书签
+set ideamarks
+
+" Sets how many lines of history VIM has to remember
+set history=500
 
 "--设置相对行号 和 当前行的绝对行号
 set number relativenumber
 
 "--设置返回normal模式时回到英文输入法
-set keep-english-in-normal
+" set keep-english-in-normal
 
+
+"禁用错误提示音
+set visualbell
+set noerrorbells
+" 当“on”时，一些命令将光标移动到该行的第一个非空白处。 关闭时，光标将保留在同一列中（如果可能）
+set startofline=on
 
 
 " ================================================================================================
@@ -63,6 +89,7 @@ xnoremap <C-k> :m '<-2<cr>gv=gv
 imap jj <Esc>
 imap jk <Esc>
 
+
 "--格式化（规范化）文本，即对选定的文本进行换行或重排，适应指定的文本宽度。
 "全文规范化：Ctrl+Alt+l
 map Q gq
@@ -74,8 +101,15 @@ nmap gt <action>(GotoTest)
 let g:WhichKeyDesc_GotoTest = "gt 在源代码和测试代码之间快速切换"
 "将光标移动到上一个方法的声明处
 " last changed in current buffer(file)
-nmap gm <action>(MethodUp)
-let g:WhichKeyDesc_MethodUp = "gm 将光标移动到上一个方法的声明处"
+nmap gk <action>(MethodUp)
+let g:WhichKeyDesc_MethodUp = "gk 将光标移动到上一个方法的声明处"
+
+"将光标移动到下一个方法的声明处
+" last changed in current buffer(file)
+nmap gj <action>(MethodDown)
+let g:WhichKeyDesc_MethodDown = "gj 将光标移动到下一个方法的声明处"
+
+
 "跳转到当前接口或抽象类的实现处
 nmap ga <action>(GotoImplementation)
 let g:WhichKeyDesc_GotoImplementation = "ga 跳转到当前接口或抽象类的实现处"
@@ -84,9 +118,29 @@ let g:WhichKeyDesc_GotoImplementation = "ga 跳转到当前接口或抽象类的
 nmap ma <action>(ToggleBookmark)
 let g:WhichKeyDesc_bookmark = "ma 书签"
 
+"=============================================================
+" 个人习惯
+"=============================================================
+
 "切换标签页
-nmap L <action>(NextTab)
-nmap H <action>(PreviousTab)
+"nmap L <action>(NextTab)
+"nmap H <action>(PreviousTab)
+
+
+" 选择模式选到行首
+vmap H ^
+" 选择模式选到行尾
+vmap L $
+"上一个Tab
+nmap gH <action>(PreviousTab)
+"下一个Tab
+nmap gL <action>(NextTab)
+
+"行首
+nmap H ^
+"行尾
+nmap L $
+
 
 "将Ctrl + s 映射为保存文档(也可以在VIM设置里将此快捷键设置为IDEA的快捷键)
 nmap <C-S> <action>(SaveAll)
@@ -428,7 +482,7 @@ map <leader>ru <action>(Run)
 let g:WhichKeyDesc_Show = "<leader>s 显示&停止"
 
 "显示当前打开文件的文件结构弹出窗口，其中包含文件中的类、方法、字段等结构(Alt + 7)
-let g:WhichKeyDesc_Show_FileStructure = "<leader>ss 显示文件结构"
+let g:WhichKeyDesc_Show_FileStructure = "<leader>ss 显示文件结构" 当前页面方法列表
 nmap <leader>ss <action>(FileStructurePopup)
 "显示书签（Bookmarks）工具窗口，其中包含当前文件中设置的书签列表(Ctrl + F11)
 let g:WhichKeyDesc_Show_Bookmarks = "<leader>sb 显示书签工具窗口"
