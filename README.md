@@ -12,6 +12,7 @@
 - **.zshrc：** Zsh shell 的配置。
 - **_vimrc：** Vim 文本编辑器的配置。
 - **settings:** Visual Studio Code 中的setting（包含Vim）配置
+- **keybindings:** Visual Studio Code 中的keybindings 配置
 - **ideavimrc：** IntelliJ IDEA 中的 IdeaVim 插件的配置。
 
 ## 如何使用
