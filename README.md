@@ -13,6 +13,7 @@
 - **_vimrc：** Vim 文本编辑器的配置。
 - **settings:** Visual Studio Code 中的setting（包含Vim）配置
 - **ideavimrc：** IntelliJ IDEA 中的 IdeaVim 插件的配置。
+- **squirrel.custom.yaml:** 极笔五笔配置文件（Mac）
 
 ## 如何使用
 
