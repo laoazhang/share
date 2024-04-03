@@ -58,7 +58,7 @@ set history=500
 set number relativenumber
 
 "--设置返回normal模式时回到英文输入法
-" set keep-english-in-normal
+set keep-english-in-normal
 
 
 "禁用错误提示音
@@ -132,9 +132,9 @@ vmap H ^
 " 选择模式选到行尾
 vmap L $
 "上一个Tab
-nmap gH <action>(PreviousTab)
+nmap K ^ <action>(PreviousTab)
 "下一个Tab
-nmap gL <action>(NextTab)
+nmap J ^ <action>(NextTab)
 
 "行首
 nmap H ^
