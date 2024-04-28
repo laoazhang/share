@@ -131,10 +131,15 @@ let g:WhichKeyDesc_bookmark = "ma 书签"
 vmap H ^
 " 选择模式选到行尾
 vmap L $
+
+nmap K 5k
+
+nmap J 5j
+
 "上一个Tab
-nmap K ^ <action>(PreviousTab)
+"nmap K ^ <action>(PreviousTab)
 "下一个Tab
-nmap J ^ <action>(NextTab)
+"nmap J ^ <action>(NextTab)
 
 "行首
 nmap H ^
