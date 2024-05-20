@@ -86,8 +86,8 @@ xnoremap <C-k> :m '<-2<cr>gv=gv
 
 "--将 jj 和 jk 映射为 <Esc>
 "jj和jk为主流配置，可按喜好自行调整
-imap jj <Esc>
-imap jk <Esc>
+"imap jj <Esc>
+"imap jk <Esc>
 
 
 "--格式化（规范化）文本，即对选定的文本进行换行或重排，适应指定的文本宽度。
