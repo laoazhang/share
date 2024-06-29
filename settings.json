@@ -2,8 +2,8 @@
     "vim.easymotion": true,
     "vim.leader": "<Space>",
     "vim.useSystemClipboard": true,
-    "vim.sneak": true,
-    "vim.surround": true,
+    // "vim.sneak": true,
+    // "vim.surround": true,
     "vim.handleKeys": {
         "<C-c>": false,
     },
